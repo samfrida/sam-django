@@ -36,7 +36,7 @@ def experience(request):
         'content': content_html,
         'title':"Experience"
     }
-    return render(request, "templates/base.html", context)
+    return render(request, "base.html", context)
 
 def education(request):
     # Django comes with a "shortcut" function called "render", that
@@ -47,7 +47,7 @@ def education(request):
         'content': content_html,
         'title':"Education"
     }
-    return render(request, "templates/base.html", context)
+    return render(request, "base.html", context)
 
 def interest(request):
     # Django comes with a "shortcut" function called "render", that
@@ -58,7 +58,7 @@ def interest(request):
         'content': content_html,
         'title':"Interest"
     }
-    return render(request, "templates/base.html", context)
+    return render(request, "base.html", context)
 
 
 
