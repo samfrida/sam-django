@@ -12,9 +12,6 @@ def index(request):
         <a href="/github-api-example">See my GitHub contributions</a> <br />
     ''')
 
-
-
-
 def about(request):
     # Django comes with a "shortcut" function called "render", that
     # lets us read in HTML template files in separate directories to
