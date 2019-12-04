@@ -22,7 +22,7 @@ def about(request):
     context = {
         # 'content': content_html,
         # 'title':"About",
-        'github_repos': repos,
+        # 'github_repos': repos,
     }
     # return render(request, "base.html", context)
     return render(request, "index.html", context)
