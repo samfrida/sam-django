@@ -47,7 +47,7 @@
         </div>
       </nav>
 
-      <div class = "content">
+      <div class = "content" style = "margin:0;">
           {% block content %}
           {% endblock content %}
       </div>
@@ -55,10 +55,10 @@
       <div class="row">
 
           <div class="col-sm-8">
-              <h3 style = "padding-left:5px;">My github repos</h3>
+              <h3 style = "padding-left:10px;">My github repos</h3>
               <ol>
               {% for repo in github_repos %}
-                  <li>{{ repo.name }}</li>
+                  <li>{{ repo.name }}   ........   Last updated: {{ repo.updated_at }} </li>
               {% endfor %}
               </ol>
           </div>
