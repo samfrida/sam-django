@@ -28,6 +28,8 @@ def experience(request):
     # Django comes with a "shortcut" function called "render", that
     # lets us read in HTML template files in separate directories to
     # keep our code better organized.
+    response = requests.get('https://api.github.com/users/samfrida/repos')
+    repos = response.json()
     context = {
         'github_repos': repos,
     }
@@ -37,6 +39,8 @@ def education(request):
     # Django comes with a "shortcut" function called "render", that
     # lets us read in HTML template files in separate directories to
     # keep our code better organized.
+    response = requests.get('https://api.github.com/users/samfrida/repos')
+    repos = response.json()
     context = {
         'github_repos': repos,
     }
@@ -46,6 +50,8 @@ def interest(request):
     # Django comes with a "shortcut" function called "render", that
     # lets us read in HTML template files in separate directories to
     # keep our code better organized.
+    response = requests.get('https://api.github.com/users/samfrida/repos')
+    repos = response.json()
     context = {
         'github_repos': repos,
     }
