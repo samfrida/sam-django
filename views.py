@@ -16,15 +16,16 @@ def about(request):
     # Django comes with a "shortcut" function called "render", that
     # lets us read in HTML template files in separate directories to
     # keep our code better organized.
-    content_html = open ("content/index.html").read()
+    # content_html = open ("content/index.html").read()
     response = requests.get('https://api.github.com/users/samfrida/repos')
     repos = response.json()
     context = {
-        'content': content_html,
-        'title':"About",
+        # 'content': content_html,
+        # 'title':"About",
         'github_repos': repos,
     }
-    return render(request, "base.html", context)
+    # return render(request, "base.html", context)
+    return render(request, "index.html", context)
 
 
 def experience(request):
