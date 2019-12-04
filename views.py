@@ -17,9 +17,11 @@ def about(request):
     # lets us read in HTML template files in separate directories to
     # keep our code better organized.
     # content_html = open ("content/index.html").read()
-    # response = requests.get('https://api.github.com/users/samfrida/repos')
-    # repos = response.json()
-    context = {}
+    response = requests.get('https://api.github.com/users/samfrida/repos')
+    repos = response.json()
+    context = {
+        'github_repos': repos,
+    }
     # return render(request, "base.html", context)
     return render(request, "index.html", context)
 
