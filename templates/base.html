@@ -53,10 +53,10 @@
       <div class="row">
 
         <div class="col-sm-8">
-            <h1>My github repos</h1>
+            <h3>My github repos</h3>
             <ol>
             {% for repo in github_repos %}
-                <li>{{ repo.name }}</li>
+                <li>{{ repo.name }}   ......  Last update: {{ repo.updated_at }}</li>
             {% endfor %}
             </ol>
         </div>
