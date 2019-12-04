@@ -21,7 +21,7 @@ def about(request):
     # repos = response.json()
     context = {}
     # return render(request, "base.html", context)
-    return render(request, "content/index.html", context)
+    return render(request, "index.html", context)
 
 
 def experience(request):
@@ -33,7 +33,7 @@ def experience(request):
         # 'content': content_html,
         # 'title':"Experience"
     }
-    return render(request, "content/Experience.html", context)
+    return render(request, "Experience.html", context)
 
 def education(request):
     # Django comes with a "shortcut" function called "render", that
@@ -44,7 +44,7 @@ def education(request):
         # 'content': content_html,
         # 'title':"Education"
     }
-    return render(request, "content/Education.html", context)
+    return render(request, "Education.html", context)
 
 def interest(request):
     # Django comes with a "shortcut" function called "render", that
@@ -55,7 +55,7 @@ def interest(request):
         # 'content': content_html,
         # 'title':"Interest"
     }
-    return render(request, "content/Interest.html", context)
+    return render(request, "Interest.html", context)
 
 
 def github_api_example(request):
