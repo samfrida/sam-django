@@ -16,13 +16,11 @@ def about(request):
     # Django comes with a "shortcut" function called "render", that
     # lets us read in HTML template files in separate directories to
     # keep our code better organized.
-    # content_html = open ("content/index.html").read()
     response = requests.get('https://api.github.com/users/samfrida/repos')
     repos = response.json()
     context = {
         'github_repos': repos,
     }
-    # return render(request, "base.html", context)
     return render(request, "index.html", context)
 
 
@@ -30,10 +28,8 @@ def experience(request):
     # Django comes with a "shortcut" function called "render", that
     # lets us read in HTML template files in separate directories to
     # keep our code better organized.
-    # content_html = open ("content/Experience.html").read()
     context = {
-        # 'content': content_html,
-        # 'title':"Experience"
+        'github_repos': repos,
     }
     return render(request, "Experience.html", context)
 
@@ -41,10 +37,8 @@ def education(request):
     # Django comes with a "shortcut" function called "render", that
     # lets us read in HTML template files in separate directories to
     # keep our code better organized.
-    # content_html = open ("content/Education.html").read()
     context = {
-        # 'content': content_html,
-        # 'title':"Education"
+        'github_repos': repos,
     }
     return render(request, "Education.html", context)
 
@@ -52,10 +46,8 @@ def interest(request):
     # Django comes with a "shortcut" function called "render", that
     # lets us read in HTML template files in separate directories to
     # keep our code better organized.
-    # content_html = open ("content/Interest.html").read()
     context = {
-        # 'content': content_html,
-        # 'title':"Interest"
+        'github_repos': repos,
     }
     return render(request, "Interest.html", context)
 
